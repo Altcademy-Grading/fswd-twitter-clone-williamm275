@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.6.1'
 # Use Puma as the app server
@@ -11,6 +10,9 @@ gem 'puma', '>= 5.6.4'
 gem 'sass-rails', '~> 6.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
+# Use Active Model has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+gem 'wdm', '>= 0.1.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Use Uglifier as compressor for JavaScript assets
 # gem 'uglifier', '~> 4.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -37,7 +39,7 @@ gem 'aws-sdk-s3', '~> 1.114'
 gem 'webrick', '~> 1.7'
 # Mail gem
 gem 'mail', '>= 2.8.0.rc1'
-
+gem 'tzinfo-data'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
