@@ -40,13 +40,6 @@ class CreateTweet extends React.Component {
            
             const tweetForm = document.querySelector('textarea#tweet');
             tweetForm.value = ""
-            const tweetFormFile = document.querySelector('input#file-select');
-            tweetFormFile.value = ''
-           
-            this.setState({
-                msg: '',
-                selectedFile: null,
-            })
             this.props.getAllTweets();
         })
         .catch(error => {
@@ -66,10 +59,6 @@ class CreateTweet extends React.Component {
                 </div>
                 
                 <div className="form-group row g-0">
-                    <div className="col d-inline-flex">
-                        <input className="form-control" type="file" id="file-select" name="selectedFile" onChange={this.onFileSelect}/>
-                    </div>
-
                     <div className="col d-flex justify-content-end">
                         <button type="submit" className="btn btn-tweet btn-primary me-3"><b>Tweet</b></button>
                     </div>    

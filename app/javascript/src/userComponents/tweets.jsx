@@ -48,13 +48,12 @@ class Tweets extends React.Component {
                                 <div className="col d-flex justify-content-between">
                                     <div>
                                         <span className="tweet-name"><b>{tweet.username}</b></span>
-                                        <a href={`/${tweet.username}`} className="p-0 tweet-username">@{tweet.username}</a>                                
+                                        <a href={`/${tweet.username}`} className="p-0 tweet-username text-decoration-none">@{tweet.username}</a>                                
                                     </div>
-                                    {(tweet.username == username) ? <button type="button" className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>}
+                                    {(tweet.username == username) ? <button type="button" className="btn btn-danger btn-sm btn-delete mt-1" onClick={this.deleteTweet}>Remove</button> : <div></div>}
                                 </div>
                                 <div className="col py-1">
                                     <span>{tweet.message}</span>
-                                    {(tweet.image !== null) ? <div><img className="img-fluid" src={tweet.image} /></div> : <div></div>}
                                 </div>
                             </div>
                         </div>
