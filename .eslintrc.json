@@ -1,0 +1,75 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  // JS configs
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["unused-imports", "prettier"],
+  "rules": {
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "no-unused-vars": "warn",
+    "unused-imports/no-unused-imports": "error",
+    "no-undef": "error",
+    "react/jsx-key": "error",
+    "no-useless-escape": "warn",
+    "no-prototype-builtins": "off"
+  },
+  "globals": {
+    "React": true,
+    "JSX": true,
+    "Stripe": true,
+    "Redactor": true,
+    "$R": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  // TS configs
+  "overrides": [
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "plugins": ["react", "@typescript-eslint", "prettier"],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/no-children-prop": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ban-types": "warn",
+        "@typescript-eslint/no-namespace": "warn",
+        "react/no-unescaped-entities": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "unused-imports/no-unused-imports": "warn",
+        "no-undef": "error",
+        "react/jsx-key": "warn",
+        "no-useless-escape": "warn",
+        "no-prototype-builtins": "off"
+      },
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
+}
